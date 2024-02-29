@@ -1,38 +1,132 @@
-.App {
+/* App.css */
+
+/* Main container */
+.book-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Title */
+.book-title {
   text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Search and filter section */
+.search-filter-section {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
+  margin-bottom: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.search-input {
+  padding: 8px;
+  font-size: 14px;
+  flex-grow: 1;
+  margin-right: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.filter-select {
+  padding: 8px;
+  font-size: 14px;
+}
+
+/* Recommendation button */
+.recommendation-button {
+  padding: 8px 12px;
+  font-size: 14px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.recommendation-button:hover {
+  background-color: #0056b3;
+}
+
+/* Book list */
+.book-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.book-item {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.book-cover {
+  width: 100px;
+  height: 150px;
+  margin-right: 20px;
+}
+
+.book-details {
+  flex: 1;
+}
+
+.book-title {
+  margin: 0;
+  font-size: 18px;
+}
+
+.book-author {
+  margin-top: 5px;
+  font-size: 14px;
+  color: #666;
+}
+
+.book-description {
+  margin-top: 5px;
+  font-size: 14px;
+  color: #444;
+}
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 768px) {
+  .book-container {
+    padding: 10px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .search-filter-section {
+    flex-direction: column;
+  }
+
+  .search-input,
+  .filter-select,
+  .recommendation-button {
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .book-cover {
+    width: 80px;
+    height: 120px;
+    margin-right: 10px;
+  }
+
+  .book-title {
+    font-size: 16px;
+  }
+
+  .book-author,
+  .book-description {
+    font-size: 12px;
+  }
+
+  .recommendation-button {
+    font-size: 12px;
+    padding: 6px 10px;
   }
 }
